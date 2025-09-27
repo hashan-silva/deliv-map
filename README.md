@@ -2,6 +2,9 @@
 
 DelivMap is a Kotlin-based Android app that helps delivery drivers capture paper labels, extract addresses, geocode them, and build an optimized multi-stop route directly on a Google Map.
 
+[![SonarCloud analysis](https://github.com/hashan-silva/deliv-map/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/hashan-silva/deliv-map/actions/workflows/sonarcloud.yml)
+[![CodeQL](https://github.com/hashan-silva/deliv-map/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/hashan-silva/deliv-map/actions/workflows/github-code-scanning/codeql)
+
 ## Prerequisites
 
 1. [Create a Google Maps Platform project](https://developers.google.com/maps/documentation/android-sdk/start) and enable the **Maps SDK for Android** and **Places API**.
