@@ -15,6 +15,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject Google Maps key from env/gradle properties into a string resource
+        // Priority: env var GOOGLE_MAPS_API_KEY -> Gradle property GOOGLE_MAPS_API_KEY -> fallback
+        val mapsKeyProvider = providers
+            .environmentVariable("GOOGLE_MAPS_API_KEY")
+            .orElse(providers.gradleProperty("GOOGLE_MAPS_API_KEY"))
+            .orElse("CHANGE_ME_GOOGLE_MAPS_API_KEY")
+        resValue("string", "google_maps_key", mapsKeyProvider.get())
     }
 
     buildTypes {
