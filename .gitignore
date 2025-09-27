@@ -37,3 +37,6 @@ app/build/
 captures/
 .externalNativeBuild/
 .cxx/
+
+# Allow Gradle wrapper JAR for CI
+!gradle/wrapper/gradle-wrapper.jar
